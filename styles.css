@@ -1,0 +1,279 @@
+/* === Google Fonts === */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600&family=Playfair+Display:wght@500;700&display=swap');
+
+/* === Typography and Reset === */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Montserrat', sans-serif;
+  background-color: #fdfdfd;
+  color: #3a5a40;
+  line-height: 1.7;
+  font-size: 1rem;
+}
+
+p, ul, li, a, button, input, textarea {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+h1, h2, h3, h4 {
+  font-family: 'Playfair Display', serif;
+  color: #2f3e34;
+  margin-bottom: 0.5rem;
+  line-height: 1.2;
+}
+h1 {
+  font-size: 2.5rem; /* ~40px */
+}
+
+h2 {
+  font-size: 2rem;   /* ~32px */
+}
+
+h3 {
+  font-size: 1.5rem; /* ~24px */
+}
+
+h4 {
+  font-size: 1.25rem; /* ~20px */
+}
+
+ul {
+  margin-left: 1.2rem;
+  margin-bottom: 1.5rem;
+}
+
+li {
+  margin-bottom: 0.5rem;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+/* === Header === */
+header {
+  background-color: #2c1d13;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;       /* Consistent padding */
+  height: 60px;            /* Fixed height to avoid tall header */
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  font-family: 'Montserrat', sans-serif; /* consistent font */
+}
+
+.logo {
+  font-size: 1.75rem;
+  font-weight: 700;        /* Bold logo text */
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: white;  /* keep text white if any */
+}
+
+.logo img {
+  height: 40px;  /* adjust this to your desired logo size */
+  width: auto;
+}
+
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 1.5rem;
+  font-weight: 700;
+  font-size: 1rem;
+  position: relative;
+  top: 14px; /* tripled from 6px */
+}
+
+.nav-links a {
+  color: white;
+  font-weight: 700;        /* Bolder nav links */
+  padding-bottom: 2px;
+  border-bottom: 2px solid transparent;
+  transition: border 0.3s ease;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.nav-links a:hover,
+.nav-links .active {
+  border-bottom: 2px solid #a3b18a;
+}
+
+/* === Hero Section === */
+.hero {
+  background: url("images/cafe-bg.jpg") center/cover no-repeat;
+  color: white;
+  padding: 7rem 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero-text {
+  background: rgba(0, 0, 0, 0.6);
+  padding: 2.5rem;
+  border-radius: 12px;
+  max-width: 600px;
+  text-align: center;
+}
+
+.hero-text h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.hero-text p {
+  font-size: 1.1rem;
+  margin-bottom: 1.5rem;
+}
+
+.btn {
+  display: inline-block;
+  background-color: #3a5a40;
+  color: white;
+  padding: 0.75rem 1.5rem;
+  border-radius: 5px;
+  font-weight: 600;
+  transition: background 0.3s ease;
+}
+
+.btn:hover {
+  background-color: #2a4630;
+}
+
+/* === Layout Utility === */
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+/* === Features Section === */
+.features {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 2rem;
+  margin-top: 3rem;
+}
+
+.feature-box {
+  flex: 1 1 300px;
+  background: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.07);
+  padding: 1.5rem;
+  text-align: center;
+  transition: transform 0.3s ease;
+}
+
+.feature-box:hover {
+  transform: translateY(-5px);
+}
+
+.feature-box img {
+  width: 100%;
+  border-radius: 10px;
+  margin-bottom: 1rem;
+}
+
+/* === Footer === */
+footer {
+  background-color: #2c1d13;
+  color: white;
+  text-align: center;
+  padding: 2rem 1rem;
+  margin-top: 4rem;
+  font-size: 0.95rem;
+}
+
+footer a {
+  color: #a3b18a;
+  text-decoration: underline;
+}
+/* === Menu Page Styles === */
+.menu-section {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+  margin-top: 4rem;
+}
+
+.menu-category {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  background-color: #ffffff;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.07);
+  gap: 2rem;
+}
+
+.menu-heading {
+  flex: 1;
+}
+
+.menu-heading h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.menu-items {
+  list-style: none;
+  padding: 0;
+}
+
+.menu-items li {
+  margin-bottom: 0.5rem;
+  font-size: 1.1rem;
+  color: #3a5a40;
+}
+
+.menu-category img {
+  width: 100%;
+  max-width: 400px;
+  height: auto;
+  border-radius: 12px;
+  object-fit: cover;
+}
+
+/* === Cookie Consent Banner === */
+.cookie-banner {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  background: #2c1d13;
+  color: white;
+  text-align: center;
+  padding: 1rem;
+  font-size: 0.95rem;
+  display: none;
+  z-index: 10000;
+}
+
+.cookie-banner button {
+  background: #a3b18a;
+  border: none;
+  color: #2c1d13;
+  padding: 0.5rem 1rem;
+  margin-left: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  border-radius: 4px;
+}
